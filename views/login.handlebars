@@ -1,0 +1,22 @@
+<div class="card">
+    <h3 class="card-header">Login</h3>
+    <form id="login-form" class="card-body">
+        <label class="form-label" for="username-login">Username</label>
+        <input id="username-login" type="text" autofocus="true" class="form-input"/>
+
+        <label class="form-label" for="password-login">Password</label>
+        <input id="password-login" type="password" autofocus="true" class="form-input"/>
+
+        <button type="submit" class="btn">Login</button>
+        <a class="login-link" href="/signup">Sign-Up / Create an Account</a>
+    </form>
+</div>
+
+<script src="/js/login.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Call the loginFormHandler function after the DOM has loaded
+    const loginForm = document.querySelector('#login-form');
+    loginForm.addEventListener('submit', loginFormHandler);
+  });
+</script>

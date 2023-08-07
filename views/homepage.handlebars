@@ -1,0 +1,46 @@
+<style>
+  .homepage {
+    /* Add any specific styling for the homepage if needed */
+  }
+
+  .card {
+    /* Add styling for the card as needed */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .card-title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .card-title {
+    margin: 0;
+  }
+
+  .posted-by {
+    margin-left: 10px; /* Adjust the spacing as needed */
+  }
+</style>
+
+<div class="homepage">
+  {{#each posts_data}}
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title-container">
+          <h2 class="card-title">{{title}}</h2>
+          <p class="posted-by">Posted by: {{user.username}} on {{formatDate createdAt}}</p>
+        </div>
+      </div>
+      <div class="card-content">
+        <p>{{content}}</p>
+      </div>
+      <div class="card-footer">
+        <a href="/view-comments/{{id}}" class="btn">View Comments</a>
+      </div>
+    </div>
+  {{/each}}
+</div>

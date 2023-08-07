@@ -1,0 +1,391 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #3e6a6fa8;
+  --secondary: #9F6FA0;
+  --seagreen: #4BAEA0;
+  --light: #F9F1F2;
+  --dark: #1e1e1e;
+}
+
+body {
+  background-color: var(--primary);
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--dark);
+  font-size: 24px;
+}
+
+h1,
+h2,
+h3,
+h5,
+h6 {
+  font-weight: 500;
+  margin: 0;
+  color: var(--dark);
+}
+
+.link-color {
+  color: var(--seagreen);
+  margin: 10px;
+  padding: 10px;
+}
+
+main {
+  margin: 20px auto;
+  width: 95%;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  font-size: 1rem;
+}
+
+.btn {
+  font-size: 1rem;
+  padding: 5px 5px;
+  width: 100%;
+  display: block;
+  margin: 5px 0;
+  border-radius: .5rem;
+  color: white;
+  background-color:#1E1E1E;
+  transform: translate(-1px, -1px);
+}
+
+.btn:hover {
+  color: var(--primary);
+  background-color: var(--seagreen);
+  transform: translate(0, 0);
+  box-shadow: 2px 2px var(--dark);
+}
+
+.btn-inline {
+  display: inline;
+}
+
+.btn-back {
+  border: none;
+  border-radius: .4rem;
+  color: var(--primary);
+  background-color: var(--light);
+  box-shadow: 3px 3px var(--secondary);
+  transform: translate(-1px, -1px);
+  display: inline-block;
+  width: auto;
+  margin-top: 20px;
+  padding: 15px;
+  font-size: 1.3rem;
+}
+
+.btn-back:hover {
+  color: var(--primary);
+  background-color: var(--seagreen);
+  transform: translate(0, 0);
+  box-shadow: 2px 2px var(--dark);
+}
+
+.hero {
+  padding: 3% 4%;
+  background-color: var(--dark);
+  color: var(--primary);
+}
+
+.hero p {
+  max-width: 75%;
+}
+
+.app-title {
+  font-size: 2.5rem;
+  background-color: var(--primary);
+  color: var(--dark);
+  padding: 1px 8px;
+  display: inline-block;
+  border-radius: .4rem;
+  box-shadow: 5px 5px var(--light);
+}
+
+.list-group {
+  padding: 0;
+  list-style: none;
+}
+
+.list-item {
+  margin-bottom: 10px;
+  padding: 1.5%;
+  border-radius: .4rem;
+  background-color: var(--light);
+  color: var(--primary);
+}
+
+.list-item:hover {
+  background-color: var(--dark);
+}
+
+.icon-danger {
+  color: #D82D2D;
+}
+
+.icon-success {
+  color: #0DA006;   
+}
+
+.card {
+  background-color: #3e6a6fa8;
+  margin: 0 0 20px 0;
+  border: 2px solid var(--dark);
+  border-radius: .4rem;
+}
+
+.card-header {
+  color: var(--primary);
+  background-color: var(--dark);
+  padding: 1%;
+}
+
+.card-body {
+  padding: 1%;
+}
+
+h4 {
+  font-weight: 700;
+  margin: 0;
+  color: var(--light);
+  line-height: 1.25;
+}
+
+.link {
+  color: var(--light);
+}
+
+.login-link {
+  color: var(--dark);
+}
+
+.nav {
+  padding: 10px;
+  line-height: 1.25;
+  float: top;
+}
+
+footer {
+  border-top: 1px solid;
+  display: flex;
+  justify-content: center;
+  padding: 1%;
+  font-size: 100%;
+}
+
+.form-label,
+.form-input,
+.form-teaxtarea {
+  display: block;
+}
+
+.form-label {
+  font-size: 1rem;
+  margin: 0 0 0 5px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 1%;
+  margin: 5px 0;
+  font-size: 1rem;
+  border: 2px solid var(--light);
+  border-radius: .4rem;
+}
+
+.min-100-vh {
+  min-height: 100vh;
+}
+
+.min-100-vw {
+  min-width: 100vh;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.justify-space-around {
+  justify-content: space-around;
+}
+
+.justify-flex-start {
+  justify-content: flex-start;
+}
+
+.justify-flex-end {
+  justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-stretch {
+  align-items: stretch;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.col-auto {
+  flex-grow: 1;
+}
+
+.dashboard, .home{
+  /* Remove display: grid */
+  gap: 20px;
+}
+
+.card {
+  display: block; /* Set display to block to make it full width */
+  width: 100%;
+  color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #353535;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px; /* Optional: add some bottom margin between cards */
+  
+}
+
+/* Add this CSS to your stylesheets */
+.card-header {
+  background-color: #353535;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  color: #3e6a6f; /* Teal color without opacity */
+}
+
+.card-title {
+  margin: 0;
+}
+
+.card-content {
+  margin-top: 10px;
+}
+
+.card-footer {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+/* Add this CSS to your stylesheets or inside a <style> tag */
+a.btn {
+  background-color: #353535; /* Brown background color */
+  color: #fff; /* White text color */
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none; /* Remove underline from link */
+  display: inline-block;
+}
+
+/* Add hover effect */
+a.btn:hover {
+  opacity: 0.8; /* Reduce opacity on hover */
+}
+
+.card-title {
+  color: #fff; /* White text color */
+}
+
+.edit-post-btn,
+  .delete-post-btn {
+    background-color: #353535; /* Brown background color */
+    color: #fff; /* White text color */
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 8px;
+    cursor: pointer;
+  }
+
+  /* Add hover effect */
+  .edit-post-btn:hover,
+  .delete-post-btn:hover {
+    background-color: #6b6b6b; /* Darker brown background color on hover */
+  }
+
+  .nav {
+    background-color: var(--dark);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .link {
+    color: var(--light);
+    text-decoration: none;
+    margin: 0 5px; /* Reduced the margin for closer links */
+    padding: 8px 12px; /* Increased the padding for bigger links */
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    font-size: 40px; /* Increased the font size */
+  }
+  
+  .link:hover {
+    background-color: var(--seagreen);
+    color: var(--primary);
+  }
+  
+  #logout {
+    background-color: #D82D2D;
+  }
+  
+  #logout:hover {
+    background-color: #6b6b6b;
+  }
+  
