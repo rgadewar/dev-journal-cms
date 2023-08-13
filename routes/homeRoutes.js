@@ -94,6 +94,33 @@ router.get('/view-comments/:postId', async (req, res) => {
   }
 });
 
+// router.get('/view-comments/:id', async (req, res) => {
+//   const postId = req.params.id;
+//   try {
+//     // Retrieve the post data
+//     const post = await Post.findByPk(postId);
+
+//     if (!post) {
+//       return res.status(404).send('Post not found');
+//     }
+
+//     // Retrieve the user data using user_id from the post
+//     const user = await User.findByPk(post.user_id, {
+//       attributes: ['username'],
+//     });
+
+//     if (!user) {
+//       return res.status(404).send('User not found');
+//     }
+
+//     res.render('view-comments', { post, user });
+//   } catch (error) {
+//     console.error('Error fetching post and user:', error);
+//     res.status(500).send('Error fetching post and user');
+//   }
+// });
+
+
 
 module.exports = router;
 

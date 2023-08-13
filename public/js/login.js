@@ -22,6 +22,8 @@ async function loginFormHandler(event) {
         }
     };
 };
-   
-document.querySelector('#login-form').addEventListener('submit', loginFormHandler);
-   
+document.addEventListener('DOMContentLoaded', () => {
+    // Call the loginFormHandler function after the DOM has loaded
+    const loginForm = document.querySelector('#login-form');
+    loginForm.addEventListener('submit', loginFormHandler);
+    });
