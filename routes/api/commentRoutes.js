@@ -12,17 +12,48 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Route to get a comment by ID
+
+// Route to get a comment by ID along with associated user and post
+// router.get('/:id', async (req, res) => {
+//   const commentId = req.params.id;
+
+//   try {
+//     const comment = await Comment.findByPk(commentId, {
+//       include: [
+//         { model: User, as: 'user' }, // Include user information
+//         { model: Post, as: 'post' } // Include associated post
+//       ]
+//     });
+
+//     if (!comment) {
+//       return res.status(404).json({ error: 'Comment not found' });
+//     }
+
+//     res.json(comment);
+//   } catch (err) {
+//     res.status(500).json({ error: 'Failed to fetch comment' });
+//   }
+// });
+
+// Route to get a post by ID along with associated comments and user information
 router.get('/:id', async (req, res) => {
-  const commentId = req.params.id;
+  const postId = req.params.id;
+
   try {
-    const comment = await Comment.findByPk(commentId);
-    if (!comment) {
-      return res.status(404).json({ error: 'Comment not found' });
+    const post = await Post.findByPk(postId, {
+      include: [
+        { model: User, as: 'user' }, // Include user information
+        { model: Comment, include: { model: User, as: 'user' } } // Include associated comments with user information
+      ]
+    });
+
+    if (!post) {
+      return res.status(404).json({ error: 'Post not found' });
     }
-    res.json(comment);
+
+    res.json(post);
   } catch (err) {
-    res.status(500).json({ error: 'Failed to fetch comment' });
+    res.status(500).json({ error: 'Failed to fetch post' });
   }
 });
 
