@@ -401,8 +401,8 @@ a.btn:hover {
   }
   
   .link:hover {
-    background-color: var(--seagreen);
-    color: var(--primary);
+    /* background-color: var(--seagreen); */
+    color:  seagreen;
   }
   
   #logout {
