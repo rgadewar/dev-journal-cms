@@ -24,13 +24,7 @@ router.post("/login", (req, res, next) => {
       }
 
       // Authentication successful and post created, redirect to the dashboard
-    req.session.loggedIn = true;
-
-    // Set loggedIn as a local variable to be used in the template
-    // res.locals.loggedIn = req.session.loggedIn;
-
-      // Pass loggedIn as part of the query parameters in the redirect
-      // res.redirect("/dashboard?loggedIn=true");
+      req.session.loggedIn = true;
       res.redirect("/dashboard");
     });
   })(req, res, next);
