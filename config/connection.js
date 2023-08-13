@@ -20,6 +20,8 @@ if (process.env.JAWSDB_URL) {
     }
   );
   // logging: console.log
+  // Your other configuration options...
+  logging: false // Disable SQL query logging
 }
 
 // Export the Sequelize instance

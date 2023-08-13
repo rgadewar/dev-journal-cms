@@ -199,6 +199,9 @@ h4 {
   line-height: 1.25;
   float: top;
 }
+.nav:hover {
+  color: seagreen;
+}
 
 footer {
   border-top: 1px solid;
@@ -398,8 +401,8 @@ a.btn:hover {
   }
   
   .link:hover {
-    background-color: var(--seagreen);
-    color: var(--primary);
+    /* background-color: var(--seagreen); */
+    color:  seagreen;
   }
   
   #logout {
@@ -410,3 +413,14 @@ a.btn:hover {
     background-color: #6b6b6b;
   }
   
+  /* Add this CSS rule to define a class for white-colored links */
+  /* Define a class for the link */
+.white-link {
+  color: white;
+  transition: color 0.3s; /* Add smooth transition for the color change */
+}
+
+/* Apply the hover effect to the link */
+.white-link:hover {
+  color: seagreen;
+}
