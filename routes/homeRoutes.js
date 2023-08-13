@@ -16,7 +16,6 @@ router.get('/signup', (req, res) => {
     res.render('signup');
 });
 router.get('/create-post', isAuthenticated, (req, res) => {
-  // If the code reaches this point, it means the user is authenticated.
   // You can access the "loggedIn" flag from the "req.session" object
   const loggedIn = req.session.loggedIn;
 
@@ -68,7 +67,7 @@ router.get('/add-comment', isAuthenticated, async (req, res) => {
     const postId = req.query.post_id;
     const post = await Post.findByPk(postId);
     const user_id = req.user.id; // Assuming the user ID is available in req.user
-    console.log("In add comment route" + req.user.id);
+    // console.log("In add comment route" + req.user.id);
 
     res.render('add-comment', { post_id: postId, user_id: req.user.id });
   } catch (err) {
@@ -93,41 +92,12 @@ router.get('/view-comments/:postId', async (req, res) => {
     }
 
     // Render the view-comments handlebars template and pass the post and its comments to it
-    console.log('Post Object:', post);
     res.render('view-comments', { post: post });
   } catch (err) {
     console.error('Error rendering view-comments page:', err);
     res.status(500).json({ error: 'Internal Server Error' });
   }
 });
-
-// router.get('/view-comments/:id', async (req, res) => {
-//   const postId = req.params.id;
-//   try {
-//     // Retrieve the post data
-//     const post = await Post.findByPk(postId);
-
-//     if (!post) {
-//       return res.status(404).send('Post not found');
-//     }
-
-//     // Retrieve the user data using user_id from the post
-//     const user = await User.findByPk(post.user_id, {
-//       attributes: ['username'],
-//     });
-
-//     if (!user) {
-//       return res.status(404).send('User not found');
-//     }
-
-//     res.render('view-comments', { post, user });
-//   } catch (error) {
-//     console.error('Error fetching post and user:', error);
-//     res.status(500).send('Error fetching post and user');
-//   }
-// });
-
-
 
 module.exports = router;
 

@@ -19,7 +19,7 @@ if (process.env.JAWSDB_URL) {
       port: 3306
     }
   );
-  logging: console.log
+  // logging: console.log
 }
 
 // Export the Sequelize instance

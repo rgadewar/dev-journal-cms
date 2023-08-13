@@ -12,29 +12,6 @@ router.get('/', async (req, res) => {
   }
 });
 
-
-// Route to get a comment by ID along with associated user and post
-// router.get('/:id', async (req, res) => {
-//   const commentId = req.params.id;
-
-//   try {
-//     const comment = await Comment.findByPk(commentId, {
-//       include: [
-//         { model: User, as: 'user' }, // Include user information
-//         { model: Post, as: 'post' } // Include associated post
-//       ]
-//     });
-
-//     if (!comment) {
-//       return res.status(404).json({ error: 'Comment not found' });
-//     }
-
-//     res.json(comment);
-//   } catch (err) {
-//     res.status(500).json({ error: 'Failed to fetch comment' });
-//   }
-// });
-
 // Route to get a post by ID along with associated comments and user information
 router.get('/:id', async (req, res) => {
   const postId = req.params.id;
@@ -99,19 +76,6 @@ router.delete('/:id', async (req, res) => {
     res.status(500).json({ error: 'Failed to delete comment' });
   }
 });
-
-// // Route to render the "add-comment" form
-// router.get('/add-comment', async (req, res) => {
-//   try {
-//     const postId = req.query.post_id;
-//     const post = await Post.findByPk(postId);
-
-//     res.render('add-comment', { post_id: postId });
-//   } catch (err) {
-//     console.error('Error rendering add-comment form:', err);
-//     res.status(500).json({ error: 'Internal Server Error' });
-//   }
-// });
 
 // Handle the form submission to add a comment (POST request)
 router.post('/add-comment', async (req, res) => {

@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const isAuthenticated = require("../../utils/middleware/isAuthenticated");
 const Post = require('../../models/Post');
-// Sample in-memory storage for posts (Replace this with a database in production)
 const posts = [];
 
 // Route to get all posts
@@ -99,8 +98,6 @@ router.get('/edit-post/:id', (req, res) => {
   try {
     const post = posts.find((post) => post.id === postId);
     if (!post) {
-      // If the post with the given ID is not found, handle this case appropriately
-      // For example, display an error page or redirect to the dashboard with a message.
       res.status(404).send('Post not found');
       return;
     }
