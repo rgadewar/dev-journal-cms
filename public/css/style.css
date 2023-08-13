@@ -144,9 +144,20 @@ p {
 .card {
   background-color: #3e6a6fa8;
   margin: 0 0 20px 0;
-  border: 2px solid var(--dark);
+  /* border: 2px solid var(--dark); */
   border-radius: .4rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  /* padding: 10px;
+  margin: 10px; */
+  /* height: 200px; */
 }
+.card-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 
 .card-header {
   color: var(--primary);
@@ -156,6 +167,16 @@ p {
 
 .card-body {
   padding: 1%;
+}
+
+.posted-by {
+  margin-left: 10px; /* Adjust the spacing as needed */
+}
+.post-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px;
 }
 
 h4 {

@@ -1,31 +1,19 @@
-<!-- view-comments.handlebars -->
-<style>
-  /* Add any specific styling for the view-comments page if needed */
-  .post-card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 10px;
-    margin: 10px;
-  }
-</style>
-
 <h1>Post Details</h1>
 <div class="post-card">
   <h2>{{post.title}}</h2>
-  <p>Posted by: {{user.username}} on {{formatDate post.createdAt}}</p>
+  <p>Posted by: {{this.id}} on {{formatDate post.createdAt}}</p>
   <p>{{post.content}}</p>
 </div>
 
 <h1>Comments</h1>
 {{#each post.comments}}
   <div class="card">
-  <div class="card-header">
-    <p class="posted-by">Posted by:  {{user.username}} on {{formatDate createdAt}}</p>
+    <div class="card-header">
+      <p class="posted-by">Posted by: {{this.id}} on {{formatDate createdAt}}</p>
+    </div>
+    <div class="card-content">
+      <p>{{this.comment_text}}</p>
+    </div>
   </div>
-  <div class="card-content">
-    <p>{{this.comment_text}}</p>
-  </div>
-</div>
 {{/each}}
-
 

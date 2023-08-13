@@ -23,9 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
               user_id: userId, // Include the user ID in the request body
             }),
           });
-  
-          // Handle the response as needed
-  
         } catch (err) {
           console.error('Error adding comment:', err);
         }
