@@ -81,12 +81,19 @@ router.get('/add-comment', isAuthenticated, async (req, res) => {
 router.get('/view-comments/:postId', async (req, res) => {
   try {
     const postId = req.params.postId;
-    const post = await Post.findByPk(postId, { include: Comment });
+    const post = await Post.findByPk(postId, { include: [
+      User,
+      {
+        model: Comment,
+        include: User
+      }
+    ] });
     if (!post) {
       return res.status(404).json({ error: 'Post not found' });
     }
 
     // Render the view-comments handlebars template and pass the post and its comments to it
+    console.log('Post Object:', post);
     res.render('view-comments', { post: post });
   } catch (err) {
     console.error('Error rendering view-comments page:', err);

@@ -25,6 +25,7 @@ app.engine(
       formatDate: function (date) {
         return moment(date).format("M/D/YYYY");
       },
+  
     },
     runtimeOptions: {
       allowProtoPropertiesByDefault: true, // Enable the option
