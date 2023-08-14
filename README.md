@@ -3,9 +3,10 @@
   
 ## Description 
 
- Challenge is to build a CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well.
- ![Image 1](Image1.png)   
-![Image 2](Image2.png)
+Challenge is to build a CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well.
+![Image 1](images/home.png)   
+![Image 2](images/comments.png)
+![Image 3](images/dashboard.png)
 
 ## User Story
 AS A developer who writes about tech
