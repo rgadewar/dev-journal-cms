@@ -4,9 +4,9 @@
 
 :root {
   --primary: #3e6a6fa8;
-  --secondary: #9F6FA0;
-  --seagreen: #4BAEA0;
-  --light: #F9F1F2;
+  --secondary: #9f6fa0;
+  --seagreen: #4baea0;
+  --light: #f9f1f2;
   --dark: #1e1e1e;
 }
 
@@ -58,9 +58,9 @@ p {
   width: 100%;
   display: block;
   margin: 5px 0;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   color: white;
-  background-color:#1E1E1E;
+  background-color: #1e1e1e;
   transform: translate(-1px, -1px);
 }
 
@@ -77,7 +77,7 @@ p {
 
 .btn-back {
   border: none;
-  border-radius: .4rem;
+  border-radius: 0.4rem;
   color: var(--primary);
   background-color: var(--light);
   box-shadow: 3px 3px var(--secondary);
@@ -112,7 +112,7 @@ p {
   color: var(--dark);
   padding: 1px 8px;
   display: inline-block;
-  border-radius: .4rem;
+  border-radius: 0.4rem;
   box-shadow: 5px 5px var(--light);
 }
 
@@ -124,7 +124,7 @@ p {
 .list-item {
   margin-bottom: 10px;
   padding: 1.5%;
-  border-radius: .4rem;
+  border-radius: 0.4rem;
   background-color: var(--light);
   color: var(--primary);
 }
@@ -134,18 +134,18 @@ p {
 }
 
 .icon-danger {
-  color: #D82D2D;
+  color: #d82d2d;
 }
 
 .icon-success {
-  color: #0DA006;   
+  color: #0da006;
 }
 
 .card {
   background-color: #3e6a6fa8;
   margin: 0 0 20px 0;
   /* border: 2px solid var(--dark); */
-  border-radius: .4rem;
+  border-radius: 0.4rem;
   border: 1px solid #ccc;
   border-radius: 8px;
   /* padding: 10px;
@@ -157,7 +157,6 @@ p {
   justify-content: space-between;
   align-items: center;
 }
-
 
 .card-header {
   color: var(--primary);
@@ -190,8 +189,8 @@ h4 {
   color: var(--light);
 }
 
-.login-link {
-  color: var(--dark);
+.link:hover {
+  color: seagreen;
 }
 
 .nav {
@@ -228,7 +227,7 @@ footer {
   margin: 5px 0;
   font-size: 1rem;
   border: 2px solid var(--light);
-  border-radius: .4rem;
+  border-radius: 0.4rem;
 }
 
 .min-100-vh {
@@ -290,7 +289,8 @@ footer {
   flex-grow: 1;
 }
 
-.dashboard, .home{
+.dashboard,
+.home {
   /* Remove display: grid */
   gap: 20px;
 }
@@ -305,7 +305,6 @@ footer {
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin-bottom: 20px; /* Optional: add some bottom margin between cards */
-  
 }
 
 /* Add this CSS to your stylesheets */
@@ -366,55 +365,52 @@ a.btn:hover {
 }
 
 .edit-post-btn,
-  .delete-post-btn {
-    background-color: #353535; /* Brown background color */
-    color: #fff; /* White text color */
-    padding: 8px 16px;
-    border: none;
-    border-radius: 4px;
-    margin-right: 8px;
-    cursor: pointer;
-  }
+.delete-post-btn {
+  background-color: #353535; /* Brown background color */
+  color: #fff; /* White text color */
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  margin-right: 8px;
+  cursor: pointer;
+}
 
-  /* Add hover effect */
-  .edit-post-btn:hover,
-  .delete-post-btn:hover {
-    background-color: #6b6b6b; /* Darker brown background color on hover */
-  }
+/* Add hover effect */
+.edit-post-btn:hover,
+.delete-post-btn:hover {
+  background-color: #6b6b6b; /* Darker brown background color on hover */
+}
 
-  .nav {
-    background-color: var(--dark);
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .link {
-    color: var(--light);
-    text-decoration: none;
-    margin: 0 5px; /* Reduced the margin for closer links */
-    padding: 8px 12px; /* Increased the padding for bigger links */
-    border-radius: 4px;
-    transition: background-color 0.3s;
-    font-size: 40px; /* Increased the font size */
-  }
-  
-  .link:hover {
-    /* background-color: var(--seagreen); */
-    color:  seagreen;
-  }
-  
-  #logout {
-    background-color: #D82D2D;
-  }
-  
-  #logout:hover {
-    background-color: #6b6b6b;
-  }
-  
-  /* Add this CSS rule to define a class for white-colored links */
-  /* Define a class for the link */
+.nav {
+  background-color: var(--dark);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login-link {
+  color: var(--light); /* Change this to the desired color */
+  text-decoration: none;
+}
+
+/* Hover effect for the login link */
+.login-link:hover {
+  color: white;
+}
+.link:hover {
+  /* background-color: var(--seagreen); */
+  color: seagreen;
+}
+
+#logout {
+  background-color: #d82d2d;
+}
+
+#logout:hover {
+  background-color: #6b6b6b;
+}
+
 .white-link {
   color: white;
   transition: color 0.3s; /* Add smooth transition for the color change */
